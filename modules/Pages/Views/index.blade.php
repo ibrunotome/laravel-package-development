@@ -1,4 +1,4 @@
-<h1>Páginas</h1>
+<h1>{{ trans('Page::pages.title') }}</h1>
 
 <ul>
     @foreach($pages as $page)

@@ -11,6 +11,14 @@
 |
 */
 
+use Illuminate\Support\Facades\Route;
+
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('/locale/{locale}', function ($locale) {
+    request()->session()->put('locale', $locale);
+
+    return redirect('/pages');
 });

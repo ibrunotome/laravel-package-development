@@ -13,4 +13,10 @@ class PagesController extends Controller
 
         return view('Page::index', compact('pages'));
     }
+
+    public function view()
+    {
+        echo config('pages.home');
+        echo config('pages.error_page');
+    }
 }
